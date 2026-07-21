@@ -11,6 +11,8 @@
     "prettier:check": "prettier . --check",
     "prettier:format": "prettier . --write",
     "test:browser": "vitest",
+    "test:ci": "vitest run --browser.headless",
+    "test:coverage": "vitest run --coverage --browser.headless",
     "prepare": "husky"
   },
   "dependencies": {
@@ -21,6 +23,7 @@
     "@commitlint/config-conventional": "^21.2.0",
     "@eslint/js": "^10.0.1",
     "@vitest/browser-playwright": "^4.1.10",
+    "@vitest/coverage-v8": "4.1.10",
     "eslint": "^10.7.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.6",

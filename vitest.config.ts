@@ -9,5 +9,13 @@ export default defineConfig({
       // https://vitest.dev/config/browser/playwright
       instances: [{ browser: 'chromium' }],
     },
+    coverage: {
+      thresholds: {
+        lines: 90,
+        functions: 90,
+        branches: 90,
+        statements: 90,
+      },
+    },
   },
 });
