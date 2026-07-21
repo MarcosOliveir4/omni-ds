@@ -1,6 +1,8 @@
 # ⚡ Omni DS
 
 [![Main CI & Coverage](https://github.com/MarcosOliveir4/omni-ds/actions/workflows/main-coverage.yml/badge.svg)](https://github.com/MarcosOliveir4/omni-ds/actions/workflows/main-coverage.yml) [![Chromatic Deployment](https://github.com/MarcosOliveir4/omni-ds/actions/workflows/chromatic.yml/badge.svg)](https://github.com/MarcosOliveir4/omni-ds/actions/workflows/chromatic.yml)
+[![Maintainability](https://qlty.sh/gh/MarcosOliveir4/projects/omni-ds/maintainability.svg)](https://qlty.sh/gh/MarcosOliveir4/projects/omni-ds)
+[![Code Coverage](https://qlty.sh/gh/MarcosOliveir4/projects/omni-ds/coverage.svg)](https://qlty.sh/gh/MarcosOliveir4/projects/omni-ds)
 
 O **Omni DS** é uma proposta de unificar o desenvolvimento de interfaces através de uma biblioteca de Web Components totalmente agnóstica.
 
