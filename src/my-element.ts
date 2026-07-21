@@ -1,8 +1,8 @@
-import { LitElement, css, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
-import litLogo from './assets/lit.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { LitElement, css, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import litLogo from './assets/lit.svg';
+import viteLogo from './assets/vite.svg';
+import heroImg from './assets/hero.png';
 
 /**
  * An example element.
@@ -16,7 +16,7 @@ export class MyElement extends LitElement {
    * The number of times the button has been clicked.
    */
   @property({ type: Number })
-  count = 0
+  count = 0;
 
   render() {
     return html`
@@ -112,11 +112,11 @@ export class MyElement extends LitElement {
 
       <div class="ticks"></div>
       <section id="spacer"></section>
-    `
+    `;
   }
 
   private _onClick() {
-    this.count++
+    this.count++;
   }
 
   static styles = css`
@@ -428,11 +428,11 @@ export class MyElement extends LitElement {
         height: 48px;
       }
     }
-  `
+  `;
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'my-element': MyElement
+    'my-element': MyElement;
   }
 }
