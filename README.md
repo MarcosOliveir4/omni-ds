@@ -1,5 +1,7 @@
 # ⚡ Omni DS
 
+[![Main CI & Coverage](https://github.com/MarcosOliveir4/omni-ds/actions/workflows/main-coverage.yml/badge.svg)](https://github.com/MarcosOliveir4/omni-ds/actions/workflows/main-coverage.yml) [![Chromatic Deployment](https://github.com/MarcosOliveir4/omni-ds/actions/workflows/chromatic.yml/badge.svg)](https://github.com/MarcosOliveir4/omni-ds/actions/workflows/chromatic.yml)
+
 O **Omni DS** é uma proposta de unificar o desenvolvimento de interfaces através de uma biblioteca de Web Components totalmente agnóstica.
 
 Construído sobre a performance e simplicidade do [Lit](https://lit.dev/), nosso objetivo é entregar componentes que não dependem de um framework específico para brilhar. Seja em uma aplicação robusta em **Angular**, em um projeto SSR moderno com **Next.js**, ou em puro HTML, o Omni DS se adapta ao seu ecossistema e à sua identidade visual.

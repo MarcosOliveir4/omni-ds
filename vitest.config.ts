@@ -12,6 +12,7 @@ const dirname =
 export default defineConfig({
   test: {
     coverage: {
+      reporter: ['text', 'lcov', 'html'],
       thresholds: {
         lines: 90,
         functions: 90,
