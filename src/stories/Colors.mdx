@@ -1,0 +1,52 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+
+{/* O Meta define onde essa página vai aparecer no menu lateral do Storybook */}
+
+<Meta title="Design Tokens/Cores" />
+
+# 🎨 Cores (Theme)
+
+As cores do **Omni DS** foram baseadas em paletas de alta performance visual para garantir o contraste e a legibilidade nativa do conteúdo.
+
+<br />
+
+## Paleta de Uso (Variáveis CSS)
+
+Sempre prefira usar as variáveis CSS nos componentes, pois elas se adaptam automaticamente aos modos Light e Dark.
+
+<ColorPalette>
+  <ColorItem
+    title="Brand / Primary"
+    subtitle="--omni-color-primary"
+    colors={{
+      Base: 'var(--omni-color-primary)',
+      Hover: 'var(--omni-color-primary-hover)',
+    }}
+  />
+  <ColorItem
+    title="Background & Surface"
+    subtitle="--omni-color-background / surface"
+    colors={{
+      Background: 'var(--omni-color-background)',
+      Surface: 'var(--omni-color-surface)',
+      Border: 'var(--omni-color-border)',
+    }}
+  />
+  <ColorItem
+    title="Text / Typography"
+    subtitle="--omni-color-text"
+    colors={{
+      Main: 'var(--omni-color-text)',
+      Muted: 'var(--omni-color-text-muted)',
+    }}
+  />
+  <ColorItem
+    title="Feedback"
+    subtitle="Sucesso, Aviso e Erro"
+    colors={{
+      Success: 'var(--omni-color-success)',
+      Warning: 'var(--omni-color-warning)',
+      Danger: 'var(--omni-color-danger)',
+    }}
+  />
+</ColorPalette>
