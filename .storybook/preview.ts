@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/web-components-vite';
+import '../src/theme/index.scss';
 
 const preview: Preview = {
   parameters: {
@@ -16,6 +17,30 @@ const preview: Preview = {
       test: 'todo',
     },
   },
+
+  globalTypes: {
+    theme: {
+      description: 'Tema global dos componentes',
+      defaultValue: 'light',
+      toolbar: {
+        title: 'Theme',
+        icon: 'circlehollow',
+        items: [
+          { value: 'light', icon: 'circlehollow', title: 'Light Mode' },
+          { value: 'dark', icon: 'circle', title: 'Dark Mode' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+
+  decorators: [
+    (story, context) => {
+      const theme = context.globals.theme;
+      document.documentElement.setAttribute('data-theme', theme);
+      return story();
+    },
+  ],
 };
 
 export default preview;
