@@ -1,9 +1,18 @@
 {
   "name": "omni-ds",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Omni Design System",
   "type": "module",
   "packageManager": "pnpm@11.15.1",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/omni-components.es.js",
+      "require": "./dist/omni-components.umd.js"
+    },
+    "./theme.css": "./dist/omni-ds.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -18,7 +27,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
+  "peerDependencies": {
     "lit": "^3.3.3"
   },
   "devDependencies": {
@@ -49,6 +58,8 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.64.0",
     "vite": "^8.1.1",
+    "vite-plugin-dts": "^5.0.3",
+    "vite-plugin-libcss": "^1.1.2",
     "vitest": "^4.1.10",
     "vitest-browser-lit": "^1.0.1"
   }
