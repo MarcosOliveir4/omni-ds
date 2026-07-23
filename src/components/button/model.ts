@@ -6,5 +6,4 @@ export interface OmniButtonProps {
   size: Size;
   disabled: boolean;
   label: string;
-  onClick?: (event: MouseEvent) => void;
 }

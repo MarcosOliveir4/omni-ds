@@ -1,5 +1,6 @@
 import { LitElement, html, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 import type { Size, Variant } from './model';
 import buttonStyles from './omni-button.scss?inline';
 
@@ -16,27 +17,18 @@ export class OmniButton extends LitElement {
   @property({ type: Boolean, reflect: true })
   disabled = false;
 
-  @property({ type: Function })
-  onClick?: (event: MouseEvent) => void;
-
-  constructor() {
-    super();
-    this.addEventListener(
-      'click',
-      (event) => {
-        if (this.disabled) {
-          event.preventDefault();
-          event.stopPropagation();
-          event.stopImmediatePropagation();
-        }
-      },
-      { capture: true },
-    );
-  }
-
   render() {
+    const btnClasses = {
+      [this.variant]: true,
+      [this.size]: true,
+    };
+
     return html`
-      <button class=${this.variant} ?disabled=${this.disabled} part="base">
+      <button
+        class=${classMap(btnClasses)}
+        ?disabled=${this.disabled}
+        part="base"
+      >
         <slot></slot>
       </button>
     `;
