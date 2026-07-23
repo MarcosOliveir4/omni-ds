@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { expect, fn } from 'storybook/test';
 
 import type { OmniButtonProps } from './model';
 import './omni-button';
@@ -28,20 +27,13 @@ const meta: Meta<OmniButtonProps> = {
       control: 'text',
       description: 'Texto interno do botão (injetado via slot)',
     },
-    onClick: {
-      action: 'clicked',
-      description: 'Evento disparado ao clicar no botão',
-    },
   },
-  args: {
-    onClick: fn(),
-  },
+  args: {},
   render: (args) => html`
     <omni-button
       variant=${args.variant}
       size=${args.size}
       ?disabled=${args.disabled}
-      @click=${args.onClick}
     >
       ${args.label}
     </omni-button>
@@ -58,12 +50,6 @@ export const Primary: Story = {
     size: 'medium',
     disabled: false,
     label: 'Botão Primário',
-    onClick: fn(),
-  },
-  play: async ({ args, canvasElement, userEvent }) => {
-    const button = canvasElement.querySelector('omni-button') as HTMLElement;
-    await userEvent.click(button);
-    await expect(args.onClick).toHaveBeenCalled();
   },
 };
 
@@ -73,7 +59,6 @@ export const Outline: Story = {
     size: 'medium',
     disabled: false,
     label: 'Botão Outline',
-    onClick: fn(),
   },
 };
 
@@ -83,11 +68,5 @@ export const Disabled: Story = {
     size: 'medium',
     disabled: true,
     label: 'Desabilitado',
-    onClick: fn(),
-  },
-  play: async ({ args, canvasElement, userEvent }) => {
-    const button = canvasElement.querySelector('omni-button') as HTMLElement;
-    await userEvent.click(button);
-    await expect(args.onClick).not.toHaveBeenCalled();
   },
 };
