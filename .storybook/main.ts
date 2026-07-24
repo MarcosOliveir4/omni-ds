@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/web-components-vite';
+import type { StorybookConfig } from '@storybook/html-vite';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -7,8 +7,7 @@ const config: StorybookConfig = {
     '@storybook/addon-vitest',
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
-    '@storybook/addon-styling-webpack',
   ],
-  framework: '@storybook/web-components-vite',
+  framework: '@storybook/html-vite',
 };
 export default config;
