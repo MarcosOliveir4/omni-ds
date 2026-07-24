@@ -4,13 +4,16 @@
 [![Maintainability](https://qlty.sh/gh/MarcosOliveir4/projects/omni-ds/maintainability.svg)](https://qlty.sh/gh/MarcosOliveir4/projects/omni-ds)
 [![Code Coverage](https://qlty.sh/gh/MarcosOliveir4/projects/omni-ds/coverage.svg)](https://qlty.sh/gh/MarcosOliveir4/projects/omni-ds)
 
-O **Omni DS** é uma proposta de unificar o desenvolvimento de interfaces através de uma biblioteca de Web Components totalmente agnóstica.
+O **Omni DS** é uma proposta de unificar o desenvolvimento de interfaces através de um Design System puramente baseado em CSS, focado em simplicidade, leveza e flexibilidade.
 
-Construído sobre a performance e simplicidade do [Lit](https://lit.dev/), nosso objetivo é entregar componentes que não dependem de um framework específico para brilhar. Seja em uma aplicação robusta em **Angular**, em um projeto SSR moderno com **Next.js**, ou em puro HTML, o Omni DS se adapta ao seu ecossistema e à sua identidade visual.
+Construído sobre a robustez do SCSS (utilizando uma arquitetura limpa de classes componentizadas), nosso objetivo é entregar elementos visuais que não dependem de nenhuma lógica JavaScript para brilhar. Seja em uma aplicação robusta em **Angular**, em um projeto SSR moderno com **Next.js**, ou em puro HTML, o Omni DS se adapta instantaneamente ao seu ecossistema e à sua identidade visual.
 
-### 🌟 Por que o Omni DS?
+🌟 Por que o Omni DS?
 
-- **Uma base, qualquer framework:** Desenvolva sem se preocupar com migrações futuras. Funciona nativamente em Angular, React (Next.js), Vue ou Vanilla JS.
-- **Estilização sem atritos:** O tema é seu. Altere cores, espaçamentos e comportamentos facilmente utilizando Variáveis CSS globais ou modificações pontuais com a pseudo-classe `::part`.
-- **Performance Nativa:** Zero overhead de Virtual DOM. Componentes leves que utilizam as APIs nativas do navegador.
-- **Developer Experience:** Escrito 100% em TypeScript para tipagem segura, empacotado com Vite para builds ultra-rápidos e preparado com `custom-elements.json` para autocompletar na sua IDE.
+- **Zero JavaScript, 100% Agnóstico:** Desenvolva sem se preocupar com dependências pesadas, conflitos de estado ou migrações futuras. Por ser puramente CSS, funciona nativamente e sem atritos em Angular, React (Next.js), Vue ou Vanilla JS.
+
+- **Estilização e Responsividade sem atritos:** O tema é seu. Altere cores, tipografia e espaçamentos facilmente utilizando Variáveis CSS globais. A responsividade é fluida e já vem embutida nas classes através de Mixins inteligentes em SCSS.
+
+- **Performance Absoluta:** Sem overhead de Virtual DOM, sem complexidade de Shadow DOM e livre de travamentos. Entregamos apenas CSS otimizado e minificado para garantir o carregamento mais rápido possível no navegador.
+
+- **Developer Experience:** Integração feita com apenas uma linha de importação. Empacotado com Vite para builds ultrarrápidos, entregando classes semânticas, organizadas e fáceis de memorizar, mantendo o seu HTML sempre limpo.
