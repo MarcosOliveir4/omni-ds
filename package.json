@@ -1,7 +1,7 @@
 {
   "name": "omni-ds",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Omni Design System",
   "type": "module",
   "packageManager": "pnpm@11.15.1",
