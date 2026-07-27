@@ -1,9 +1,8 @@
 name: Publish npm package via Trusted Publisher
 
 on:
-  push:
-    tags:
-      - 'v*'
+  release:
+    types: [created]
 
 jobs:
   publish:
