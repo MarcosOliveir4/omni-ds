@@ -31,7 +31,7 @@ importers:
         version: 10.5.3(@vitest/browser-playwright@4.1.10)(@vitest/browser@4.1.10)(@vitest/runner@4.1.10)(react@19.2.7)(storybook@10.5.3(@types/react@19.2.17)(prettier@3.9.6)(react@19.2.7))(vitest@4.1.10)
       '@storybook/html':
         specifier: ^10.5.3
-        version: 10.5.3(storybook@10.5.3(@types/react@19.2.17)(prettier@3.9.6)(react@19.2.7))
+        version: 10.5.5(storybook@10.5.3(@types/react@19.2.17)(prettier@3.9.6)(react@19.2.7))
       '@storybook/html-vite':
         specifier: ^10.5.3
         version: 10.5.3(esbuild@0.28.1)(storybook@10.5.3(@types/react@19.2.17)(prettier@3.9.6)(react@19.2.7))(vite@8.1.5(@types/node@26.1.1)(esbuild@0.28.1)(jiti@2.7.0)(sass@1.101.3)(terser@5.49.0)(yaml@2.9.0))(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.33.0)(postcss@8.5.20))
@@ -994,6 +994,11 @@ packages:
     resolution: {integrity: sha512-YKv7IvRyTLNTfyvo96nBVwLCFe3ZT41VncErC7D84WHMos5E3Ig10o58Gyxa/ozXwjlbUvW92FZ99nTMQ6NEIw==}
     peerDependencies:
       storybook: ^10.5.3
+
+  '@storybook/html@10.5.5':
+    resolution: {integrity: sha512-Dm2Ud+UiDgtgolURvpZpN7SbOSjPJ2iy4RAxSZLR2BglE5QL7u4Uewpbs5/kw/VFT5u9SAenxEK6P/kbZuZC0g==}
+    peerDependencies:
+      storybook: ^10.5.5
 
   '@storybook/icons@2.1.0':
     resolution: {integrity: sha512-Fxh9vYpX9bQqFeHRiY8h2ApeRGDzRSMLwJwNZ/AIRqnyOKHxRKL+yFe+ctEkVJmuptRE9u1Hrn8ZZNHyfDKKNg==}
@@ -3202,6 +3207,12 @@ snapshots:
       - webpack
 
   '@storybook/html@10.5.3(storybook@10.5.3(@types/react@19.2.17)(prettier@3.9.6)(react@19.2.7))':
+    dependencies:
+      '@storybook/global': 5.0.0
+      storybook: 10.5.3(@types/react@19.2.17)(prettier@3.9.6)(react@19.2.7)
+      ts-dedent: 2.3.0
+
+  '@storybook/html@10.5.5(storybook@10.5.3(@types/react@19.2.17)(prettier@3.9.6)(react@19.2.7))':
     dependencies:
       '@storybook/global': 5.0.0
       storybook: 10.5.3(@types/react@19.2.17)(prettier@3.9.6)(react@19.2.7)
