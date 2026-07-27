@@ -35,4 +35,4 @@ jobs:
         run: pnpm build
 
       - name: Publicar no npm com Proveniência
-        run: pnpm publish --provenance --access public
+        run: pnpm publish --provenance --access public --no-git-checks
