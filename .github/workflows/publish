@@ -1,0 +1,39 @@
+name: Publish npm package via Trusted Publisher
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v7
+
+      - name: 📦 Setup pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: 🟢 Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.16.0
+          cache: 'pnpm'
+
+      - name: 📚 Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🌐 Install Playwright Browsers
+        run: pnpm dlx playwright install chromium --with-deps
+
+      - name: 🏗️ Build
+        run: pnpm build
+
+      - name: Publicar no npm com Proveniência
+        run: pnpm publish --provenance --access public
